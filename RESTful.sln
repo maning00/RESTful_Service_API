@@ -1,0 +1,17 @@
+
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RESTful", "RESTful\RESTful.csproj", "{14C5A627-7FD9-4F2A-A5C0-A2E9377BAEEB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{14C5A627-7FD9-4F2A-A5C0-A2E9377BAEEB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{14C5A627-7FD9-4F2A-A5C0-A2E9377BAEEB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{14C5A627-7FD9-4F2A-A5C0-A2E9377BAEEB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{14C5A627-7FD9-4F2A-A5C0-A2E9377BAEEB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
