@@ -34,7 +34,7 @@ namespace RESTful.Controllers
             
         }
 
-        //PUT: api/REST
+        //PUT: api/REST/5
         [HttpPut("{id}")]
         public IActionResult PutStudent(int id, Student stu)
         {
