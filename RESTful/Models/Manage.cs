@@ -35,14 +35,14 @@ namespace RESTful.Models
                 Student stu = studentlist.ElementAt(i);
                 if (stu.Number == num)
                 {
-                    studentlist.RemoveAt(i);//update the new record
-                    return "Delete successful";
+                    studentlist.RemoveAt(i);
+                    return "Deleted";
                 }
             }
-            return "Delete un-successful";
+            return "Delete failed";
         }
 
-        public Student GetOneStudent(int id)
+        public Student GetOneStudent(int id)   //寻找特定学号的学生信息
         {
             for(int i=0;i<studentlist.Count;i++)
             {
@@ -53,9 +53,9 @@ namespace RESTful.Models
             return null;
         }
 
-        public List<Student> GetAllStudent()
+        public List<Student> GetAllStudent()   
         {
-            return studentlist;
+            return studentlist;   //返回整个学生表
         }
 
 
@@ -72,5 +72,7 @@ namespace RESTful.Models
             }
             return "Update Failed";
         }
+
+
     }
 }

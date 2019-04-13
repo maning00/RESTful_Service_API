@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using RESTful.Models;
 
-namespace RESTful.Controller
+namespace RESTful.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
@@ -23,6 +23,36 @@ namespace RESTful.Controller
         public Student GetOneStudents(int id)
         {
             return Manage.GetContent().GetOneStudent(id);
+        }
+
+        //POST: api/REST
+        [HttpPost]
+        public IActionResult PostStu(Student stu)
+        {
+                Manage.GetContent().Add(stu);
+                return Ok();
+            
+        }
+
+        //PUT: api/REST
+        [HttpPut("{id}")]
+        public IActionResult PutStudent(int id, Student stu)
+        {
+            if (Manage.GetContent().GetOneStudent(id) == null)
+            { 
+            Manage.GetContent().Add(stu);
+            return Ok();
+            }
+            else
+                Manage.GetContent().UpdateStudent(stu);
+            return Ok();
+        }
+
+        //DELETE: api/REST/5
+        [HttpDelete("{id}")]
+        public IActionResult DeleteStudent(int id)
+        {
+            return Ok(Manage.GetContent().Remove(id));
         }
     }
 }
